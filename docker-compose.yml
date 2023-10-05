@@ -1,0 +1,26 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: ./flask-app  # path for flask goes here. stays this way if doc-compose is in the same dir.
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: CAT@DOG123  
+      MYSQL_DATABASE: MyDatabase
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: CAT@DOG123  
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    
