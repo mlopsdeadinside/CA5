@@ -22,4 +22,4 @@ docker pull mlopsdeadinside/my-sql-server-image:Database-tag
 
 ## Run a SQL Server container using the image:
 
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=CAT@DOG" -p 1433:1433 -d mlopsdeadinside/my-sql-server-image:Database-tag
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=CAT@DOG123" -p 1433:1433 -d mlopsdeadinside/my-sql-server-image:Database-tag
