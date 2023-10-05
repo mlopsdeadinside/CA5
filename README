@@ -1,0 +1,25 @@
+## Building the SQL Server Docker Image
+
+To build the SQL Server Docker image, follow these steps:
+
+1. Clone this repository.
+2. Navigate to the  directory.
+3. Open a terminal in the  directory.
+4. Run the following command:
+
+```bash
+docker build -t my-sql-server-image .
+
+## Running the SQL Server Container Locally
+
+To run the SQL Server container locally for testing, follow these steps:
+
+1. Make sure you have Docker installed on your machine.
+2. Pull the SQL Server image from Docker Hub:
+
+```bash
+docker pull mlopsdeadinside/my-sql-server-image:Database-tag
+
+## Run a SQL Server container using the image:
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=CAT@DOG" -p 1433:1433 -d mlopsdeadinside/my-sql-server-image:Database-tag
