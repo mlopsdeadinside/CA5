@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5000
 
 # Command to run your Flask app
-CMD ["python", "your_app_name.py"]
+CMD ["python", "Flask_app.py"]
