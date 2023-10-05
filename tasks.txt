@@ -1,1 +1,4 @@
-
+Task allocation:
+Raheimeen: Docker Compose (person 1)
+Aashan: Database (Person 3)
+Tehreem: Front End (Person 2)
