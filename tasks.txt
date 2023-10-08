@@ -1,3 +1,28 @@
+Working Group:
+
+Docker Compose File for Member 1
+To define services, create a Docker Compose file (docker-compose.yml).
+Define the database and web server services.
+Setting up both services' ports, environment variables, and volumes.
+Ascertain that the services are able to communicate with one another.
+
+Web Server Service, Member 2
+
+Decide on and configure the web server application (such as Python, Node.js, etc.).
+Configure the web server service's Dockerfile.
+For the web server, create a Docker image.
+Push the Docker image to the Docker Hub profile for the group.
+Write down the procedures for setting up and running the web server service.
+Keep your code updated on a GitHub repository.
+
+
+Database Service, Member 3 (i200491 - Aashan Javed)
+Decide on and configure a database system (such as MySQL, PostgreSQL, etc.).
+Configure the database service's Dockerfile.
+Create a database-specific Docker image.
+Push the Docker image to the Docker Hub profile for the group.
+Write down the procedures for setting up and running the database service.
+Keep your code updated on a GitHub repository.
 Task allocation:
 Raheimeen: Docker Compose (person 1)
 Aashan: Database (Person 3)
