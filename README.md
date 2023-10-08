@@ -13,5 +13,10 @@ A Docker container will now be used to execute the MongoDB database service.
 
 When the container starts, an automatic execution of the work.js script takes place. It adds test data and initialises the MongoDB collections.
 
-
+## Run the application
+1. build and run the mongo db image 
+2. build and run the flask app image
+3. docker build -t flask-app-img .
+4. docker run -d --name flask-app-container -p 5000:5000 flask-app-img
+4. open the browser and go to http://localhost:5000/
 
