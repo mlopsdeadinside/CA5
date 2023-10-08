@@ -16,7 +16,7 @@ services:
   app:
     image: mlopsdeadinside/ca4:v0 # Use the image from Docker Hub
     platform: linux/amd64
-    container_name: flask
+    container_name: flask-app
     ports:
       - "80:80"
     depends_on:
