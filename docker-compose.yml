@@ -1,26 +1,24 @@
-version: '3'
+version: "3"
 services:
-  flask-app:
-    build:
-      context: ./flask-app  # path for flask goes here. stays this way if doc-compose is in the same dir.
-    container_name: flask-app
+  db:
+    image: mongo:latest # Use the official MongoDB image from Docker Hub
+    container_name: my-mongodb-container
     ports:
-      - "5000:5000"
+      - "27017:27017" # Map the MongoDB port to the host machine
     environment:
-      - FLASK_ENV=development
-    depends_on:
-      - mysql
-
-  mysql:
-    image: mysql:8.0
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: CAT@DOG123  
-      MYSQL_DATABASE: MyDatabase
-      MYSQL_USER: sa
-      MYSQL_PASSWORD: CAT@DOG123  
-    ports:
-      - "3306:3306"
+      MONGO_INITDB_ROOT_USERNAME: admin11
+      MONGO_INITDB_ROOT_PASSWORD: 0000
+      MONGO_INITDB_DATABASE: MlopsdeadinsideDB
     volumes:
-      - ./mysql_data:/var/lib/mysql
-    
+      - ./mongodb-data:/data/db # Store MongoDB data in a local directory
+
+      
+  app:
+    image: mlopsdeadinside/ca4:v0 # Use the image from Docker Hub
+    platform: linux/amd64
+    container_name: flask
+    ports:
+      - "80:80"
+    depends_on:
+      - db # Ensure that the database service is started before the app service
+
