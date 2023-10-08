@@ -23,6 +23,7 @@ Create a database-specific Docker image.
 Push the Docker image to the Docker Hub profile for the group.
 Write down the procedures for setting up and running the database service.
 Keep your code updated on a GitHub repository.
+
 Task allocation:
 Raheimeen: Docker Compose (person 1)
 Aashan: Database (Person 3)

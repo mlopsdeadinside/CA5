@@ -11,8 +11,19 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the Flask app code into the container
 COPY . .
 
+# Copy the work.js file into a specific directory in the container
+COPY D:/FAST_NUCES/7thSemester/MLOps/ClassWork/DeadInside/CA4/dbwork/work.js /app/
+
+
 # Expose the port your Flask app runs on
 EXPOSE 5000
+
+# Environment variables for MongoDB connection
+ENV MONGO_HOST=localhost
+ENV MONGO_PORT=27017
+ENV MONGO_USERNAME=admin11
+ENV MONGO_PASSWORD=0000
+ENV MONGO_DATABASE=MlopsdeadinsideDB
 
 # Command to run your Flask app
 CMD ["python", "Flask_app.py"]
