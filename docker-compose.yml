@@ -15,8 +15,8 @@ services:
     ports:
       - "27017:27017" # Map the MongoDB port to the host machine
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: 1234
-      MONGO_INITDB_DATABASE: mydatabase
+      MONGO_INITDB_ROOT_USERNAME: admin11
+      MONGO_INITDB_ROOT_PASSWORD: 0000
+      MONGO_INITDB_DATABASE: MlopsdeadinsideDB
     volumes:
       - ./mongodb-data:/data/db # Store MongoDB data in a local directory
