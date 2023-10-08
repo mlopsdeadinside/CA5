@@ -1,25 +1,14 @@
-## Building the SQL Server Docker Image
+## Database
 
-To build the SQL Server Docker image, follow these steps:
+Open a terminal and go to the project directory where the work.js script and Dockerfile are located.
 
-1. Clone this repository.
-2. Navigate to the  directory.
-3. Open a terminal in the  directory.
-4. Run the following command:
+Create the Docker container image for the MongoDB database service: build my-mongodb-image with docker -t.
 
-```bash
-docker build -t my-sql-server-image .
+Use the following command to launch a Docker container using the MongoDB database service: 27017:27017 my-mongodb-image docker run -d --name my-mongodb-container
 
-## Running the SQL Server Container Locally
+A Docker container will now be used to execute the MongoDB database service.
 
-To run the SQL Server container locally for testing, follow these steps:
+When the container starts, an automatic execution of the work.js script takes place. It adds test data and initialises the MongoDB collections.
 
-1. Make sure you have Docker installed on your machine.
-2. Pull the SQL Server image from Docker Hub:
 
-```bash
-docker pull mlopsdeadinside/my-sql-server-image:Database-tag
 
-## Run a SQL Server container using the image:
-
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=CAT@DOG123" -p 1433:1433 -d mlopsdeadinside/my-sql-server-image:Database-tag
