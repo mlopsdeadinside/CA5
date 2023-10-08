@@ -14,5 +14,12 @@ COPY . .
 # Expose the port your Flask app runs on
 EXPOSE 5000
 
+# Environment variables for MongoDB connection
+ENV MONGO_HOST=localhost
+ENV MONGO_PORT=27017
+ENV MONGO_USERNAME=admin11
+ENV MONGO_PASSWORD=0000
+ENV MONGO_DATABASE=MlopsdeadinsideDB
+
 # Command to run your Flask app
-CMD ["python", "your_app_name.py"]
+CMD ["python", "Flask_app.ipynb"]
