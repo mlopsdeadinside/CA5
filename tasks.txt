@@ -23,6 +23,9 @@ Create a database-specific Docker image.
 Push the Docker image to the Docker Hub profile for the group.
 Write down the procedures for setting up and running the database service.
 Keep your code updated on a GitHub repository.
+Add Jenkins File
+Configure Jenkins
+Push Image to dockerhub (Completed)
 
 Task allocation:
 Raheimeen: Docker Compose (person 1)
